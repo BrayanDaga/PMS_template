@@ -1,0 +1,35 @@
+{
+  "name": "pms_template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrayanDaga/PMS_template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/BrayanDaga/PMS_template/issues"
+  },
+  "homepage": "https://github.com/BrayanDaga/PMS_template#readme",
+"scripts": {
+  "watch:sass": "sass --watch scss/custom.scss:css/custom.css",
+  "watch:njk": "eleventy --input=views --output=html --formats=njk --watch",
+  "build:njk": "eleventy --input=views --output=html --formats=njk",
+  "dev": "concurrently --names \"SASS,NJK\" -c \"bgBlue,bgCyan\" \"npm run watch:sass\" \"npm run watch:njk\""
+},
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.5",
+    "concurrently": "^9.2.1",
+    "njk-cli": "^1.0.3",
+    "nunjucks-cli": "^1.0.0",
+    "sass": "^1.98.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "nunjucks": "^3.2.4"
+  }
+}
