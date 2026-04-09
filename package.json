@@ -16,10 +16,17 @@
   },
   "homepage": "https://github.com/BrayanDaga/PMS_template#readme",
   "scripts": {
+    "build:sass": "sass scss/custom.scss:css/custom.css",
+    "build:njk": "node build-nunjucks.js",
+    "build": "concurrently \"npm run build:sass\" \"npm run build:njk\"",
     "watch:sass": "sass --watch scss/custom.scss:css/custom.css",
-    "dev": "npm run watch:sass"
+    "watch:njk": "node build-nunjucks.js && node -e \"require('chokidar').watch('views/**/*.njk').on('change', () => require('child_process').exec('node build-nunjucks.js'))\"",
+    "dev": "concurrently \"npm run watch:sass\" \"npm run watch:njk\""
   },
   "devDependencies": {
+    "chokidar": "^3.6.0",
+    "concurrently": "^8.2.2",
+    "nunjucks-cli": "^1.0.0",
     "sass": "^1.98.0"
   },
   "dependencies": {
