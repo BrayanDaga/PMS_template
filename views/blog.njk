@@ -1,0 +1,40 @@
+{% extends "_template.njk" %}
+
+{% block content %}
+
+
+{% from "_mc-hero.njk" import hero %}
+{% call hero('Investment','Insights',"Expert analysis, market insights, and investment strategies from our team of
+experienced portfolio managers.") %}
+{% endcall %}
+
+<section class="container py-5">
+    <h2 class="mb-5 fw-bold ">Featured Article</h2>
+    <div class="card shadow border-0 rounded-right">.
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <img class="img-fluid" src="https://picsum.photos/600" alt="immagine a caso" />
+            </div>
+            <div class="col-12 col-md-6 p-4 d-flex flex-column  justify-content-between">
+
+                <div class="content">
+                    <h3 class="fw-bold">Navigating Market Volatility: A Strategic Investment Approach</h3>
+                    <p class="fs-6">Learn how professional portfolio managers handle market uncertainty and protect
+                        client investments during volatile periods.</p>
+                    <div class="d-flex gap-4">
+                        <p class="text-secondary"><i class="bi bi-person"></i>Rajesh Mehta</p>
+                        <p class="text-secondary"><i class="bi bi-person"></i>Rajesh Mehta</p>
+                        <p class="text-secondary"><i class="bi bi-person"></i>Rajesh Mehta</p>
+                    </div>
+                </div>
+                <div class="content-button">
+                    <a href="" class="btn btn-primary text-white align-self-end">Read Full Article <i class="bi bi-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

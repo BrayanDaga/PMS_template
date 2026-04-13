@@ -1,25 +1,22 @@
 {% extends "_template.njk" %}
 
 {% block content %}
-.section
-<section class="container-fluid bg-light">
-   <div class="container py-5 ">
-      <div class="row flex-column justify-content-center text-center align-items-center">
-         <h1 class="display-3 fw-bold"> Empowering Your <span class="text-primary">Financial Future</span></h1>
-         <div class="col-8">
-            <p class="py-3 fs-5 text-secondary">
-               Tailored investment strategies for discerning investors. Experience
-               professional portfolio management with expertise, transparency, and
-               unwavering trust.
-            </p>
-         </div>
-         <div class="d-flex justify-content-center gap-3">
-            <button class="btn btn-primary text-light px-4">Schedule a Consultation <i class="bi bi-arrow-right"></i> </button>
-            <button class="btn btn-outline-primary ">Learn More</button>
-         </div>
-      </div>
-   </div>
-</section>
+
+{% from "_mc-hero.njk" import hero %}
+
+{% call hero(
+   'Empowering Your',
+   'Financial Future',
+   'Tailored investment strategies for discerning investors. Experience professional portfolio management with expertise, transparency, and unwavering trust.'
+) %}
+   {# Todo este contenido es lo que recibe el caller() #}
+   <button class="btn btn-primary text-light px-4">
+      Schedule a Consultation <i class="bi bi-arrow-right"></i>
+   </button>
+   <button class="btn btn-outline-primary">Learn More</button>
+{% endcall %}
+
+
 <section class="container py-5">
    <div class="row justify-content-center">
       <div class="col-6 d-flex flex-column justify-content-around">
